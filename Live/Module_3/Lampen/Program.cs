@@ -23,6 +23,14 @@ internal class Program
     }
 }
 
+
+/// <summary>
+/// Deze class is een lamp
+/// Usage:
+/// <code>
+/// Lamp l = new Lamp();
+/// </code>
+/// </summary>
 // Blauwdruk lamp
 class Lamp
 {
@@ -32,7 +40,7 @@ class Lamp
     private GloeiDraad _gloeiend = new GloeiDraad { spanning = 100 };
 
 
-    // C+++-ish
+    // C++-ish
     public void SetIntesiteit(int intensiteit)
     {
         if (intensiteit > 0 && intensiteit < 2000)
@@ -64,6 +72,9 @@ class Lamp
     // Auto generating properties. Genereren hun eigen field
     public ConsoleColor Kleur { set;  get; } = ConsoleColor.DarkYellow;
 
+    /// <summary>
+    /// Deze functie doet iets
+    /// </summary>
     // Gedrag leg je vast in Methods (functions of procedures)
     public void Aan()
     {
