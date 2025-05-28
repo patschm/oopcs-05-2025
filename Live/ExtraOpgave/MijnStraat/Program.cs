@@ -14,9 +14,15 @@ internal class Program
         Camera cam = new();
         Hek hek = new();
 
-        lus.Connect(cam);
-        lus.Connect(hek);
-        lus.Connect(kuil);
+        //lus.Connect(cam);
+        //lus.Connect(hek);
+        //lus.Connect(kuil);
+
+        lus.Detect += cam.StartOpname;
+        lus.Detect += hek.Open;
+        lus.Detect += kuil.Open;
+
+        lus.Connect(cam.StartOpname);
 
         lus.Detecteer();
 
